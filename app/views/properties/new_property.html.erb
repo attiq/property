@@ -1,0 +1,135 @@
+<title>Home for Sale</title>
+<%= error_messages_for :property %>
+
+<% form_for :property, :url => {:controller=>"properties", :action=>"create"},:html => { :multipart => true } do |f| -%>
+<div style="border:1px solid #c0c0c0;float:left">
+<div>
+<table width="100%">
+  <tr bgcolor="#e6e6e6"><td><strong>Add Property Listing</strong></td></tr>
+    </table>
+ </div>
+<div>
+  <table><tr><td>List Price:</td><td><%= f.text_field :price, :class=>"textfield" %></td></tr>
+</div>
+<div>
+  <tr><td>SQF:</td><td> <%= f.text_field :sqf, :class=>"textfield" %></td></tr>
+</div>
+<div>
+  <tr><td>Beds: </td><td><%= f.text_field :beds, :class=>"textfield" %></td></tr>
+  </div>
+<div>
+  <tr><td>Baths: </td><td><%= f.text_field :baths, :class=>"textfield" %></td></tr>
+ </div>
+<div>
+<tr><td>Street Address: </td><td><%= f.text_field :street_address, :class=>"textfield" %></td></tr>
+ </div>
+<div>
+  City: <%= f.text_field :city, :class=>"textfield" %>
+</div>
+<div>
+  Zip Code:<%= f.text_field :zip, :class=>"textfield" %>
+</div>
+<div>
+
+  State: <%= f.select( :state,  { "--Select One--" => "","Alabama" => "Alabama","Alaska" => "Alaska","American Samoa" => "American Samoa",
+        "Arizona"=>"Arizona","Arkansas"=>"Arkansas","California"=>"California","Colorado"=>"Colorado",
+        "Connecticut"=>"Connecticut","Delaware"=>"Delaware","District of Columbia"=>"District of Columbia","Florida"=>"Florida","Georgia"=>"Georgia","Guam"=>"Guam","Hawaii"=>"Hawaii","Idaho"=>"Idaho","Illinois"=>"Illinois","Indiana"=>"Indiana","Iowa"=>"Iowa","Kansas"=>"Kansas","Kentucky"=>"Kentucky","Louisiana"=>"Louisiana","Maine"=>"Maine","Maine"=>"Maine"}.sort) %>
+        </div>
+  <div>Agent Name:<%= text_field_tag :agent_name %></div>
+<div>
+  Description: <div><%= f.text_area :description%></div>
+  
+</div>
+</div>
+
+<% fields_for :image, @image do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+      
+    </div>
+  <% end %>
+<% fields_for :image1, @image1 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+
+<% fields_for :image3, @image3 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+
+<% fields_for :image4, @image4 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+  <% fields_for :image5, @image5 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+ 
+    <div>
+
+    </div>
+  <% end %>
+
+
+<% fields_for :image6, @image6 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+<% fields_for :image7, @image7 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+<% fields_for :image8, @image8 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+    
+    <div>
+
+    </div>
+  <% end %>
+
+
+  <% fields_for :image9, @image9 do |i| %>
+    <%= i.file_field "uploaded_data"%>
+
+    <div>
+
+    </div>
+  <% end %>
+                                    
+<div><%= submit_tag "create"%></div>
+
+
+             
+                               
+
+
+
+<% end -%>
+
+
+
+
+
+
+

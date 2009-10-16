@@ -1,0 +1,39 @@
+<title>List of Properties</title>
+<div style="border:1px solid #c0c0c0;float:left">
+<table>
+  
+  <tr bgcolor="#e6e6e6"><td colspan="10"><strong>List of properties</strong></td></tr>
+  <tr>
+    <th>Price</th>
+    <th>SQF</th>
+    <th>Beds</th>
+    <th>Baths</th>
+    <th>Street Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Agent Name</th>
+    <th>Show</th>
+    <th>Edit</th>
+
+  </tr>
+<%unless @properties.nil?%>
+
+<%@properties.each do |property|%>
+  <tr>
+    
+    <td><%= property.price %></td>
+    <td><%= property.sqf %></td>
+    <td><%= property.beds %></td>
+    <td><%= property.baths %></td>
+    <td><%= property.street_address %></td>
+    <td><%= property.city %></td>
+    <td><%= property.state %></td>
+    <td><%= property.user.first_name %></td>
+    <td><%= link_to 'Show',:controller=>"properties", :action=>"view_property", :id=>property.id %></td>
+    <td><%= link_to 'Edit', :controller=>"properties", :action=>"edit_property", :id=>property.id %></td>
+    
+<tr/>
+  <%end%>
+<%end%>
+</table>
+</div>
