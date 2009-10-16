@@ -1,6 +1,0 @@
-<img src="<%= @image.public_filename%>"/>
-<div id="links" class="adlinks">
-  <br/>
-    <%= link_to 'Delete Image', {:controller=>"properties" , :action=>"delete_image" , :id =>@image.id}, :confirm => 'Are you sure?',:class=>"txt-1" %>
-    / <%= link_to 'Add Image', {:controller=>"properties" , :action=>"new_image" , :id =>@image.property_id} ,:class=>"txt-1"%>
-</div>
