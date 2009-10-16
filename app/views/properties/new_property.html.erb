@@ -1,0 +1,176 @@
+<title>Home for Sale</title>
+<%= error_messages_for :property %>
+
+<% form_for :property, :url => {:controller=>"properties", :action=>"create"},:html => { :multipart => true } do |f| -%>
+  <div style="width:100%;">
+    <div style="border:1px solid #c0c0c0;float:left;width:59%;height:100%">
+      <div style="width:100%;background-color:#e6e6e6">
+       
+          <strong>Add Property Listing</strong>
+        
+      </div>
+    
+       <br/>
+        <div class="caption">
+        List Price:</div>
+        <div class="textfieldholder"><%= f.text_field :price, :class=>"textfield" %>
+        </div>
+        <br/>
+          <br/>
+        <div class="caption">
+        SQF:
+        </div>
+
+      <div class="textfieldholder"> <%= f.text_field :sqf, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+         <div class="caption">
+       Beds:</div> <div class="textfieldholder"><%= f.text_field :beds, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Baths: </div> <div class="textfieldholder"><%= f.text_field :baths, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Street Address: </div> <div class="textfieldholder"><%= f.text_field :street_address, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        City:</div> <div class="textfieldholder">  <%= f.text_field :city, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+         Zip Code: </div> <div class="textfieldholder"><%= f.text_field :zip, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+
+        State:</div> <div class="textfieldholder"> <%= f.select( :state,  { "--Select One--" => "","Alabama" => "Alabama","Alaska" => "Alaska","American Samoa" => "American Samoa",
+                "Arizona"=>"Arizona","Arkansas"=>"Arkansas","California"=>"California","Colorado"=>"Colorado",
+                "Connecticut"=>"Connecticut","Delaware"=>"Delaware","District of Columbia"=>"District of Columbia","Florida"=>"Florida","Georgia"=>"Georgia","Guam"=>"Guam","Hawaii"=>"Hawaii","Idaho"=>"Idaho","Illinois"=>"Illinois","Indiana"=>"Indiana","Iowa"=>"Iowa","Kansas"=>"Kansas","Kentucky"=>"Kentucky","Louisiana"=>"Louisiana","Maine"=>"Maine","Maine"=>"Maine"}.sort) %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">  Agent Name:</div> <div class="textfieldholder"><%= text_field_tag :agent_name%></div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Description:</div>
+        <div class="textfieldholder"> <%= f.text_area :description, :size=>"40x4"%></div>
+<br/>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+    </div>
+
+    <div style="border:1px solid #c0c0c0;float:right;width:38%;top:0px;height:100%">
+       <div style="width:100%;background-color:#e6e6e6">
+
+          <strong>Images</strong>
+
+      </div>
+      <div style="margin:5px;">Image 1</div>
+       <div style="margin:5px;">
+      <% fields_for :image, @image do |i| %>
+        <%= i.file_field "uploaded_data"%>
+        </div>
+        <div style="margin:5px;">Image 2</div>
+          <div style="margin:5px;">
+      <% end %>
+      <% fields_for :image1, @image1 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+      
+
+        </div>
+      <% end %>
+<div style="margin:5px;">Image 3</div>
+<div  style="margin:5px;">
+      <% fields_for :image3, @image3 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+        
+
+        </div>
+      <% end %>
+<div style="margin:5px;">Image 4</div>
+<div  style="margin:5px;">
+      <% fields_for :image4, @image4 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+     
+
+        </div>
+      <% end %>
+      <div style="margin:5px;">Image 5</div>
+<div  style="margin:5px;">
+      <% fields_for :image5, @image5 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+     
+
+        </div>
+      <% end %>
+<div style="margin:5px;">Image 6</div>
+<div  style="margin:5px;">
+      <% fields_for :image6, @image6 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+
+        </div>
+      <% end %>
+<div style="margin:5px;">Image 7</div>
+<div  style="margin:5px;">
+      <% fields_for :image7, @image7 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+        </div>
+      <% end %>
+      <div style="margin:5px;">Image 8</div>
+<div  style="margin:5px;">
+      <% fields_for :image8, @image8 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+     
+
+        </div>
+      <% end %>
+<div style="margin:5px;">Image 9</div>
+<div  style="margin:5px;">
+      <% fields_for :image9, @image9 do |i| %>
+        <%= i.file_field "uploaded_data"%>
+
+     
+
+        </div>
+      <% end %>
+
+
+      <div  style="margin:5px;"></div>
+
+
+    </div>
+
+
+
+  </div>
+  <div align="right"><%= submit_tag "create"%></div>
+<% end -%>
+
+
+
+
+
+
+

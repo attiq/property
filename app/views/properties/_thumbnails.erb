@@ -1,0 +1,7 @@
+<% @images.each do |img| %>
+                    <%= link_to_remote image_tag(img.public_filename(:thumbnail), :border=>0,:height=>"60" , :width=>"50" , :align=>"center"), :url=>{:controller=>"properties" ,:action=>"get_thumbnail", :id=>img.id} %>
+                  &nbsp;
+                <% end %>
+                <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <span><%= will_paginate @images %></span>
+                

@@ -1,0 +1,13 @@
+.textfieldholder
+{
+    height:20px;
+    width:250px;
+    float:left;
+}
+.caption
+{
+    height:20px;
+    width:150px;
+    float:left;
+    margin-left:5px;
+}

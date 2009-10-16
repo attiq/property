@@ -1,0 +1,111 @@
+<title><%= @property.user.first_name %> - Home for sale: <%= @property.street_address %> - <%= @property.city %>, <%= @property.zip %> - <%= @property.price %> </title>
+
+
+  
+           <div style="width:100%;">
+    <div style="border:1px solid #c0c0c0;float:left;width:78%;height:100%">
+      <div style="width:100%;background-color:#e6e6e6">
+
+          <b><%= @property.street_address %>,  <%= @property.zip %> -  <%= @property.price %> </b>
+
+      </div>
+      <div style="float:left;width:49%;height:100%">
+
+       <br/>
+       <div >
+
+
+       <div class="caption">
+        List Price:</div>
+        <div class="textfieldholder">Price:
+
+
+  <%= @property.price %>
+        </div>
+<br/>
+          <br/>
+        <div class="caption">
+        SQF:
+        </div>
+
+      <div class="textfieldholder"> <%= @property.sqf %>
+      </div>
+       <br/>
+         <div class="caption">
+       Beds:</div> <div class="textfieldholder"> <%= @property.beds %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Baths: </div> <div class="textfieldholder"> <%= @property.baths %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Street Address: </div> <div class="textfieldholder"> <%= @property.street_address %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        City:</div> <div class="textfieldholder">   <%= @property.city %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+         Zip Code: </div> <div class="textfieldholder"> <%= @property.zip %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+
+        State:</div> <div class="textfieldholder">  <%= @property.state %>
+      </div>
+      <br/>
+        <br/>
+
+      <div class="caption">  Agent Name:</div> <div class="textfieldholder"><%= @property.user.first_name %></div>
+      <br/>
+        <br/>
+ 
+     <div class="caption">
+        Description:</div>
+        <div class="textfieldholder">  <%= @property.description %></div>
+<br/>
+<br/><br/><br/><br/><br/>
+
+</div>
+
+
+
+</div>
+
+<div style="float:right;width:49%;height:100%">
+  <div>  <% unless @images.nil? %>
+           <div id="mainvehicleImages">
+             <%= render :partial => 'main_image' %>
+           </div>
+
+           <div id="dmyGallery">
+               <%= render :partial => 'thumbnails' %>
+           </div>
+
+
+
+          <% end %>
+          </div>
+
+
+</div>
+    </div>
+
+    <div style="border:1px solid #c0c0c0;float:right;width:20%;top:0px;height:100%">
+       <div style="width:100%;background-color:#e6e6e6">
+
+      <strong>Location</strong>
+
+      </div>
+  </div>
+
+
+
+  </div>

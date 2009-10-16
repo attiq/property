@@ -1,0 +1,79 @@
+<title>Home for Sale</title>
+<%= error_messages_for :property %>
+
+<% form_for :property, @property,:url => {:controller=>"properties", :action=>"update"},:html => { :multipart => true } do |f| -%>
+ <div style="width:100%;">
+    <div style="border:1px solid #c0c0c0;float:left;width:59%;height:100%">
+      <div style="width:100%;background-color:#e6e6e6">
+
+          <strong>Edit Property Listing</strong>
+
+      </div>
+  <%= f.hidden_field :id , :value=>@property.id %>
+  <%= f.hidden_field :user_id , :value=>@property.user_id %>
+  <br/>
+        <div class="caption">
+  List Price:</div>
+        <div class="textfieldholder"><%= f.text_field :price, :class=>"textfield" %>
+</div>
+  <br/>
+          <br/>
+        <div class="caption">
+        SQF:
+        </div>
+
+      <div class="textfieldholder"> <%= f.text_field :sqf, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+         <div class="caption">
+       Beds:</div> <div class="textfieldholder"><%= f.text_field :beds, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Baths: </div> <div class="textfieldholder"><%= f.text_field :baths, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        Street Address: </div> <div class="textfieldholder"><%= f.text_field :street_address, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+        City:</div> <div class="textfieldholder">  <%= f.text_field :city, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+         Zip Code: </div> <div class="textfieldholder"><%= f.text_field :zip, :class=>"textfield" %>
+      </div>
+      <br/>
+        <br/>
+      <div class="caption">
+
+        State:</div> <div class="textfieldholder"> <%= f.select( :state,  { "--Select One--" => "","Alabama" => "Alabama","Alaska" => "Alaska","American Samoa" => "American Samoa",
+                "Arizona"=>"Arizona","Arkansas"=>"Arkansas","California"=>"California","Colorado"=>"Colorado",
+                "Connecticut"=>"Connecticut","Delaware"=>"Delaware","District of Columbia"=>"District of Columbia","Florida"=>"Florida","Georgia"=>"Georgia","Guam"=>"Guam","Hawaii"=>"Hawaii","Idaho"=>"Idaho","Illinois"=>"Illinois","Indiana"=>"Indiana","Iowa"=>"Iowa","Kansas"=>"Kansas","Kentucky"=>"Kentucky","Louisiana"=>"Louisiana","Maine"=>"Maine","Maine"=>"Maine"}.sort) %>
+      </div>
+      <br/>
+        <br/>
+   <div class="caption">Agent Name:</div> <div class="textfieldholder"><%= text_field_tag :agent_name, @property.user.first_name%></div>
+   <br/><br/>
+<div class="caption">
+        Description:</div>
+        <div class="textfieldholder"> <%= f.text_area :description, :size=>"40x4"%></div>
+<br/>
+<br/><br/><br/><br/><br/>
+
+<div><%= submit_tag "update"%></div>
+</div></div>
+<% end -%>
+
+
+
+
+
+
+

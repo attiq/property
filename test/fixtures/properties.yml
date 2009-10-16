@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  status_id: 1
+  name: MyString
+  price: 1.5
+  sqf: 1.5
+  beds: 1
+  baths: 1
+  street_address: MyString
+  city: MyString
+  zip: 1
+  state: MyString
+  description: MyString
+
+two:
+  user_id: 1
+  status_id: 1
+  name: MyString
+  price: 1.5
+  sqf: 1.5
+  beds: 1
+  baths: 1
+  street_address: MyString
+  city: MyString
+  zip: 1
+  state: MyString
+  description: MyString
